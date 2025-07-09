@@ -1,0 +1,43 @@
+/* Файл: src/components/counter/style.css */
+
+/* 
+  Эти стили для корневого элемента div. 
+  Движок автоматически изолирует их для каждого экземпляра.
+*/
+.snap-component-root {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-top: 1em;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.snap-component-root p {
+  margin: 0 0 1em 0;
+}
+
+.snap-component-root p:first-of-type {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.snap-component-root i {
+  color: #555;
+}
+
+.snap-component-root button {
+  padding: 0.5em 1em;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background-color 0.2s;
+}
+
+.snap-component-root button:hover {
+  background-color: #ddd;
+}
+
+.snap-component-root button:first-of-type {
+  margin-right: 0.5em;
+}

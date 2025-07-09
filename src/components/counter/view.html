@@ -1,0 +1,20 @@
+<!-- Файл: src/components/counter/view.html (ФИНАЛЬНАЯ ВЕРСИЯ) -->
+
+<div class="snap-component-root" snap-c-id="{{meta.id}}" {{{styleAttr}}}>
+  <p>Счетчик: {{state.count}}</p>
+  <p>Сообщение: <i>{{state.message}}</i></p>
+  
+  <button
+    hx-post="/_snap/event/{{meta.id}}/increment"
+    hx-target="closest [snap-c-id]"
+    hx-swap="outerHTML"
+  >+</button>
+  
+  <button
+    hx-post="/_snap/event/{{meta.id}}/decrement"
+    hx-target="closest [snap-c-id]"
+    hx-swap="outerHTML"
+  >-</button>
+</div>
+
+{{{styleTag}}}
