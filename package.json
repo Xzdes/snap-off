@@ -1,20 +1,46 @@
 {
   "name": "snap-off",
-  "version": "1.1.0",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "version": "1.2.0",
+  "description": "Гибридный серверный компонентный движок для Node.js, использующий HTMX и WebSockets.",
+  "author": "XZdes <xzdes@yandex.ru>",
+  "license": "MIT",
+  "keywords": [
+    "htmx",
+    "ssr",
+    "server-side-rendering",
+    "websockets",
+    "components",
+    "zero-js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vash_username/snap-off.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  
+  "type": "module",
+  
+  "exports": {
+    ".": "./src/snap-off-core/index.js",
+    "./websocket": "./src/snap-off-core/websocket-server.js"
+  },
+
+  "main": "./src/snap-off-core/index.js",
+  
+  "files": [
+    "src/snap-off-core"
+  ],
+  
   "dependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "peerDependencies": {
     "express": "^5.1.0",
     "express-session": "^1.18.1",
-    "handlebars": "^4.7.8",
     "ws": "^8.18.3"
+  },
+  
+  "scripts": {
+    "test": "echo \"Тестов пока нет\"",
+    "start:example": "node examples/basic-server/server.js"
   }
 }
